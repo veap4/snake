@@ -53,6 +53,11 @@ namespace Snake
             }
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x == x && p.y == y;
+        }
+
         //Функция вывода точки в консоль
         public void Draw()
         {
@@ -60,6 +65,7 @@ namespace Snake
             Console.Write(sym);
         }
 
+        //Функция очистки точки
         public void Clear()
         {
             sym = ' ';
