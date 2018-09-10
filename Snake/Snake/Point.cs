@@ -25,6 +25,34 @@ namespace Snake
             this.sym = sym;
         }
 
+        //Конструктор с инициализацией из другой точки
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        //Функция смещения точки
+        public void Move(int offset, Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.RIGHT:
+                    x += offset;
+                    break;
+                case Direction.LEFT:
+                    x -= offset;
+                    break;
+                case Direction.UP:
+                    y -= offset;
+                    break;
+                case Direction.DOWN:
+                    y += offset;
+                    break;
+            }
+        }
+
         //Функция вывода точки в консоль
         public void Draw()
         {
