@@ -11,5 +11,12 @@ namespace Snake
         public int x;
         public int y;
         public char sym;
+
+        //Фуннкция вывода точки в консоль
+        public void Draw()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
+        }
     }
 }
